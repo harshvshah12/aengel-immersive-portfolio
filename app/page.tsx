@@ -19,7 +19,7 @@ export default function Home() {
   const [entered, setEntered] = useState(false);
   const [active, setActive] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
-  const root = useRef<HTMLElement>(null);
+  const root = useRef<HTMLElement | null>(null);
   const touchStart = useRef<number | null>(null);
 
   useEffect(() => {
