@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Experience } from "@/components/experience";
+import { Experience, ProjectExperience } from "@/components/experience";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Menu, X } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -70,7 +70,7 @@ export default function Home() {
       <section id="projects" className="projects section-pad">
         <div className="section-heading"><span>01 / SELECTED WORK</span><span>2023 — 2026</span></div>
         <div className="project-stage" onTouchStart={(e) => { touchStart.current = e.touches[0].clientX; }} onTouchEnd={(e) => { if (touchStart.current !== null) { const delta = e.changedTouches[0].clientX - touchStart.current; if (Math.abs(delta) > 40) move(delta < 0 ? 1 : -1); touchStart.current = null; } }}>
-          <div className="project-visual">
+          <div className="project-visual"><div className="project-canvas"><ProjectExperience activeIndex={active} /></div>
             <div className="visual-orbit orbit-one" /><div className="visual-orbit orbit-two" /><div className="visual-core"><div className="core-wire" /><div className="core-glow" /></div>
             <div className="visual-crosshair cross-a" /><div className="visual-crosshair cross-b" />
             <span className="visual-caption">FIG. 0{active + 1} / {project.type}</span>
