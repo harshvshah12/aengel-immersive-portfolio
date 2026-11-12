@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root{--bg:#080a0a;--fg:#e7eae5;--muted:#78817c;--line:rgba(220,230,222,.16);--mono:'DM Mono',monospace;--sans:'Manrope',sans-serif}
 *{box-sizing:border-box}
